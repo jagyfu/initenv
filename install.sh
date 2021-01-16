@@ -1,5 +1,7 @@
 #!/bin/sh
 
+## set timezone
+timedatectl set-timezone Asia/Shanghai
 
 mkdir -p /home/work/videos/
 chmod 777 /home/work/videos/
