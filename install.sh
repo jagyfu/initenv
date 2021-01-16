@@ -9,7 +9,7 @@ chmod 777 /home/work/logs/
 mkdir -p ~/soft
 
 ## install git ...
-yum install python net-tools vim -y
+yum install python python2 net-tools vim git -y
 
 yum install supervisor -y
 ## start supervisor
