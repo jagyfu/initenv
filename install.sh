@@ -13,14 +13,6 @@ mkdir -p ~/soft
 ## install git ...
 yum install python python2 net-tools vim git supervisor -y
 
-yum install supervisor -y
-## start supervisor
-echo_supervisord_conf > /etc/supervisor.conf
-echo '[include]' >> /etc/supervisor.conf
-echo 'files = /etc/supervisor/*.ini' >> /etc/supervisor.conf
-cd ~/youtube_crawler/GinVideo/scripts/
-cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
-supervisord -c /etc/supervisor.conf
 
 ## install base soft
 
@@ -62,3 +54,14 @@ mv -f main GinVideoTask
 iptables -I INPUT -p tcp --dport 8001 -j ACCEPT
 iptables -I INPUT -p tcp --dport 42001 -j ACCEPT
 iptables-save
+
+
+yum install supervisor -y
+## start supervisor
+echo_supervisord_conf > /etc/supervisor.conf
+echo '[include]' >> /etc/supervisor.conf
+echo 'files = /etc/supervisor/*.ini' >> /etc/supervisor.conf
+cd ~/youtube_crawler/GinVideo/scripts/
+cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
+supervisord -c /etc/supervisor.conf
+
