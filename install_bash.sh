@@ -22,12 +22,12 @@ fi
 if [ ! -e "server_linux_amd64" ]; then
   wget https://github.com/xtaci/kcptun/releases/download/v20210103/kcptun-linux-386-20210103.tar.gz -O kcptun-linux-386-20210103.tar.gz
   tar xzvf kcptun-linux-386-20210103.tar.gz
-  chmod +x server_linux_amd64
+  chmod +x server_linux_386
 fi
 
 ## start kcp 
 ps auxx | grep server_linux | grep -v grep | awk -F' ' '{print $2}' | xargs kill -9
-./server_linux_amd64 -l :39733 -t 127.0.0.1:5400 -key mpassPLL --crypt tea -mtu 1200 -sndwnd 2048 -rcvwnd 2048 -mode fast2 -log kcptun2.log > kcptun2.log 2>&1 &
+./server_linux_386 -l :39733 -t 127.0.0.1:5400 -key mpassPLL --crypt tea -mtu 1200 -sndwnd 2048 -rcvwnd 2048 -mode fast2 -log kcptun2.log > kcptun2.log 2>&1 &
 
 ## start gost
 ps auxx | grep gost | grep -v grep | awk -F' ' '{print $2}' | xargs kill -9
