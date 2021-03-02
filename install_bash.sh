@@ -19,7 +19,7 @@ if [ ! -e "gost" ]; then
 fi 
 
 ## install kcp
-if [ ! -e "server_linux_amd64" ]; then
+if [ ! -e "server_linux_386" ]; then
   wget https://github.com/xtaci/kcptun/releases/download/v20210103/kcptun-linux-386-20210103.tar.gz -O kcptun-linux-386-20210103.tar.gz
   tar xzvf kcptun-linux-386-20210103.tar.gz
   chmod +x server_linux_386
@@ -31,7 +31,7 @@ ps auxx | grep server_linux | grep -v grep | awk -F' ' '{print $2}' | xargs kill
 
 ## start gost
 ps auxx | grep gost | grep -v grep | awk -F' ' '{print $2}' | xargs kill -9
-./gost -L=ss://chacha20-ietf:1234567p@:5400
+./gost -L=ss://chacha20-ietf:1234567p@:5400 &
 
 ## start udp2raw 
 ps auxx | grep udp2raw_amd64| grep -v grep | awk -F' ' '{print $2}' | xargs kill -
