@@ -1,5 +1,5 @@
 #!/bin/sh
-
+## 单网卡dd方式
 yum install wget -y
 yum install net-tools -y
 wget https://download.mikrotik.com/routeros/6.47.8/chr-6.47.8.img.zip -O chr.img.zip && \
