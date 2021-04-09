@@ -58,10 +58,10 @@ iptables-save
 
 yum install supervisor -y
 ## start supervisor
-echo_supervisord_conf > /etc/supervisor.conf
-echo '[include]' >> /etc/supervisor.conf
-echo 'files = /etc/supervisor/*.ini' >> /etc/supervisor.conf
+echo_supervisord_conf > /etc/supervisord.conf
+echo '[include]' >> /etc/supervisord.conf
+echo 'files = /etc/supervisor/*.ini' >> /etc/supervisord.conf
 cd ~/youtube_crawler/GinVideo/scripts/
 cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
-supervisord -c /etc/supervisor.conf
+supervisord -c /etc/supervisord.conf
 
