@@ -18,11 +18,11 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")
 
 ## ddros
-bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/ddros.sh")
+`bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/ddros.sh")`
 
 ## install l2tp ipsec 
 ## https://github.com/hwdsl2/setup-ipsec-vpn
-wget https://git.io/vpnsetup-centos -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/ikev2.sh --auto
+`wget https://git.io/vpnsetup-centos -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/ikev2.sh --auto`
 
-## test route
-curl http://tutu.ovh/bash/returnroute/test.sh|bash
+## test return route
+`curl http://tutu.ovh/bash/returnroute/test.sh|bash`
