@@ -20,9 +20,13 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 ```
 bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")
 ```
-## ddros
+## dd ros
 ```
 bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/ddros.sh")
+```
+## dd sys
+```
+bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.sh")
 ```
 ## install l2tp ipsec 
 ## https://github.com/hwdsl2/setup-ipsec-vpn
