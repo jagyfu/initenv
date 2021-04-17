@@ -30,8 +30,13 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.s
 ```
 ## install l2tp ipsec 
 ## https://github.com/hwdsl2/setup-ipsec-vpn
+centos
 ```
 wget https://git.io/vpnsetup-centos -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/ikev2.sh --auto
+```
+debian
+```
+wget https://git.io/vpnsetup -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/ikev2.sh --auto
 ```
 
 ## test return route
