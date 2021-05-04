@@ -33,3 +33,10 @@ wget https://git.io/vpnsetup -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/i
 ```
 curl http://tutu.ovh/bash/returnroute/test.sh|bash
 ```
+
+## install docker to centos
+```
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+systemctl start docker
+```
