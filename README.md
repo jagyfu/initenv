@@ -40,3 +40,9 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 systemctl start docker
 ```
+
+## install ros docker
+https://github.com/EvilFreelancer/docker-routeros
+```
+
+```
