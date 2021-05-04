@@ -44,5 +44,8 @@ systemctl start docker
 ## install ros docker
 https://github.com/EvilFreelancer/docker-routeros
 ```
-
+git clone https://github.com/EvilFreelancer/docker-routeros.git
+cd docker-routeros
+docker build . --tag ros
+docker run --cap-add NET_ADMIN --device /dev/net/tun  -d -p 2222:22 -p 2280:80 -p 8291:8291 -p 1701:1701/udp -p 500:500/udp -p 4500:4500/udp -p 5900:5900 -ti ros
 ```
