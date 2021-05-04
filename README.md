@@ -37,7 +37,7 @@ curl http://tutu.ovh/bash/returnroute/test.sh|bash
 ## install docker to centos
 ```
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
-curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+yum install docker-ce docker-ce-cli containerd.io
 systemctl start docker
 ```
 
