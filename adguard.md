@@ -1,4 +1,3 @@
-![AdGuard](https://github.com/233Bazinga/Handling/blob/master/Picture/AdGuardBANNER.png)
    
 ### [EasyList](https://easylist.to)
 
