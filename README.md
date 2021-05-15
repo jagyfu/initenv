@@ -39,6 +39,8 @@ curl http://tutu.ovh/bash/returnroute/test.sh|bash
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 yum install docker-ce docker-ce-cli containerd.io
 systemctl start docker
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 ```
 
 ## install ros docker
