@@ -43,12 +43,12 @@ rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.
 yum install ffmpeg ffmpeg-devel -y
 
 ## complie video
-cd ~/youtube_crawler/GinVideo
-go build main.go
-mv -f main GinVideo
-cd scripts
-go build main.go
-mv -f main GinVideoTask
+#cd ~/youtube_crawler/GinVideo
+#go build main.go
+#mv -f main GinVideo
+#cd scripts
+#go build main.go
+#mv -f main GinVideoTask
 
 ## iptables
 iptables -I INPUT -p tcp --dport 8001 -j ACCEPT
