@@ -57,6 +57,13 @@ for net in $(cat netflix.txt) ; do
 done
 } > ../ros-route-Netflix.rsc
 
+
+{
+echo "/ip firewall address-list"
+for net in $(cat netflix.txt) ; do
+  echo "add list=Netflix address=$net"
+done
+} > ../ros-address-Netflix.rsc
 {
 echo "/ip firewall address-list"
 
