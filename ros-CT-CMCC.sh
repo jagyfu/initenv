@@ -16,10 +16,11 @@ wget --no-check-certificate -c -O cernet.txt https://ispip.clang.cn/cernet_cidr.
 wget --no-check-certificate -c -O gwbn.txt https://ispip.clang.cn/gwbn_cidr.txt
 #其他
 wget --no-check-certificate -c -O other.txt https://ispip.clang.cn/othernet_cidr.txt
+# netflix ip
+wget --no-check-certificate -c -O netflix.txt https://cdn.jsdelivr.net/gh/QiuSimons/Netflix_IP@master/getflix.txt
 
 {
 echo "/ip route rule"
-
 for net in $(cat ct.txt) ; do
   echo "add dst-address=$net action=lookup table=CT"
 done
@@ -49,6 +50,12 @@ for net in $(cat other.txt) ; do
 done
 } > ../ros-route-CT-CMCC.rsc 
 
+{
+echo "/ip route rule"
+for net in $(cat netflix.txt) ; do
+  echo "add dst-address=$net action=lookup table=Netflix"
+done
+} > ../ros-route-Netflix.rsc
 
 {
 echo "/ip firewall address-list"
