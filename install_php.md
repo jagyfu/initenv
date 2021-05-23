@@ -3,11 +3,8 @@ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-//查看
-yum search php71w
-
 //安装php以及扩展
-yum install php71w php71w-fpm php71w-cli php71w-common php71w-devel php71w-gd php71w-pdo php71w-mysql php71w-mbstring php71w-bcmath
+yum install php71w php71w-fpm php71w-cli php71w-common php71w-devel php71w-gd php71w-pdo php71w-mysql php71w-mbstring php71w-bcmath -y
 
 //开启服务
 service php-fpm start
