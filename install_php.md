@@ -1,3 +1,4 @@
+```
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
@@ -10,10 +11,13 @@ yum install php71w php71w-fpm php71w-cli php71w-common php71w-devel php71w-gd ph
 
 //开启服务
 service php-fpm start
+```
 
 //修改/etc/nginx/nginx.conf 使其支持php 见下
 //重启nginx
+```
 service nginx restart
+```
 ---------------------配置
 
  
