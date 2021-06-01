@@ -13,6 +13,14 @@ mkdir -p ~/soft
 ## install git ...
 yum install python python2 net-tools vim git supervisor dstat -y
 
+## install gost
+if [ ! -e "gost" ]; then
+  wget https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-386-2.11.1.gz -O gost-linux-386-2.11.1.gz
+  gunzip -d gost-linux-386-2.11.1.gz
+  mv gost-linux-386-2.11.1 gost
+  chmod +x gost 
+  mv gost /usr/sbin/
+fi 
 
 ## install base soft
 
@@ -64,4 +72,7 @@ echo 'files = /etc/supervisor/*.ini' >> /etc/supervisord.conf
 cd ~/youtube_crawler/GinVideo/scripts/
 cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
 supervisord -c /etc/supervisord.conf
+## start http proxy
+nohup gost -L=qqiloveu:qqiloveyou@:8011 > /dev/null 2>&1 &
+
 
