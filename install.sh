@@ -60,6 +60,7 @@ yum install ffmpeg ffmpeg-devel -y
 
 ## iptables
 iptables -I INPUT -p tcp --dport 8001 -j ACCEPT
+iptables -I INPUT -p tcp --dport 8002 -j ACCEPT
 iptables -I INPUT -p tcp --dport 42001 -j ACCEPT
 iptables-save
 
