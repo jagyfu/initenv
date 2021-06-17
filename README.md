@@ -9,6 +9,8 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-
 ## check media unlock
 ```
 bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh")
+// 两个都可
+bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
 ```
 ## dd ros
 ```
