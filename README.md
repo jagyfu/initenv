@@ -22,14 +22,39 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.s
 ```
 ## install l2tp ipsec 
 ## https://github.com/hwdsl2/setup-ipsec-vpn
-centos
+首先，在你的 Linux 服务器\* 上全新安装以下系统之一。
+
+使用以下命令快速搭建 IPsec VPN 服务器：
+
+<details open>
+<summary>
+Ubuntu & Debian
+</summary>
+
+```bash
+wget https://git.io/vpnsetup -O vpn.sh && sudo sh vpn.sh && sudo ikev2.sh --auto
 ```
-wget https://git.io/vpnsetup-centos -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/ikev2.sh --auto
+</details>
+
+<details>
+<summary>
+CentOS & RHEL
+</summary>
+
+```bash
+wget https://git.io/vpnsetup-centos -O vpn.sh && sudo sh vpn.sh && sudo ikev2.sh --auto
 ```
-debian
+</details>
+
+<details>
+<summary>
+Amazon Linux 2
+</summary>
+
+```bash
+wget https://git.io/vpnsetup-amzn -O vpn.sh && sudo sh vpn.sh && sudo ikev2.sh --auto
 ```
-wget https://git.io/vpnsetup -O vpn.sh && sudo sh vpn.sh && sudo bash /opt/src/ikev2.sh --auto
-```
+</details>
 
 ## test return route
 ```
