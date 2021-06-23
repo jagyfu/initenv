@@ -15,20 +15,22 @@ yum install python python2 net-tools vim git supervisor dstat htop -y
 
 ## install gost
 if [ ! -e "gost" ]; then
-  wget https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-386-2.11.1.gz -O gost-linux-386-2.11.1.gz
-  gunzip -d gost-linux-386-2.11.1.gz
-  mv gost-linux-386-2.11.1 gost
-  chmod +x gost 
-  mv gost /usr/sbin/
+    wget https://github.com/ginuerzh/gost/releases/download/v2.11.1/gost-linux-386-2.11.1.gz -O gost-linux-386-2.11.1.gz
+    gunzip -d gost-linux-386-2.11.1.gz
+    mv gost-linux-386-2.11.1 gost
+    chmod +x gost 
+    mv gost /usr/sbin/
 fi 
 
 ## install base soft
 
 cd ~/soft
-wget https://golang.org/dl/go1.14.12.linux-amd64.tar.gz
-tar zxf go1.14.12.linux-amd64.tar.gz
-cp -rf go/bin/go* /usr/bin/
-cp -rf go /usr/local/
+if [ ! -e "go1.14.12.linux-amd64.tar.gz" ]; then
+    wget https://golang.org/dl/go1.14.12.linux-amd64.tar.gz
+    tar zxf go1.14.12.linux-amd64.tar.gz
+    cp -rf go/bin/go* /usr/bin/
+    cp -rf go /usr/local/
+fi
 
 curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 chmod a+rx /usr/local/bin/youtube-dl
@@ -39,16 +41,20 @@ chmod a+rx /usr/local/bin/youtube-dl
 #yum install ffmpeg ffmpeg-devel -y
 
 ## isntall google
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-yum install google-chrome-stable_current_x86_64.rpm -y
+if [ ! -e "google-chrome-stable_current_x86_64.rpm" ]; then
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+    yum install google-chrome-stable_current_x86_64.rpm -y
+if
 ## install redis
 yum install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum --enablerepo=remi install redis -y
 yum install redis -y
 
+## install ffmpeg
 rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 yum install ffmpeg ffmpeg-devel -y
+
 
 ## complie video
 #cd ~/youtube_crawler/GinVideo
@@ -72,8 +78,10 @@ yum install supervisor -y
 echo_supervisord_conf > /etc/supervisord.conf
 echo '[include]' >> /etc/supervisord.conf
 echo 'files = /etc/supervisor/*.ini' >> /etc/supervisord.conf
-cd ~/youtube_crawler/GinVideo/scripts/
-cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
+if [ -d  ~/youtube_crawler/GinVideo/scripts/ ]; then
+    cd ~/youtube_crawler/GinVideo/scripts/
+    cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
+fi 
 supervisord -c /etc/supervisord.conf
 ## start http proxy
 nohup gost -L=qqiloveu:qqiloveyou@:8011 > /dev/null 2>&1 &
