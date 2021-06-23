@@ -61,9 +61,10 @@ yum install ffmpeg ffmpeg-devel -y
 ## iptables
 iptables -I INPUT -p tcp --dport 8001 -j ACCEPT
 iptables -I INPUT -p tcp --dport 8002 -j ACCEPT
+iptables -I INPUT -p tcp --dport 65055 -j ACCEPT
 iptables -I INPUT -p tcp --dport 42001 -j ACCEPT
 iptables -I INPUT -p udp -s 192.168.0.0/16 --dport 53 -j ACCEPT
-iptables-save
+iptables-save > /etc/sysconfig/iptables
 
 
 yum install supervisor -y
