@@ -56,6 +56,18 @@ wget https://git.io/vpnsetup-amzn -O vpn.sh && sudo sh vpn.sh && sudo ikev2.sh -
 ```
 </details>
 
+## install openvpn server on Linux
+## https://github.com/Nyr/openvpn-install
+```bash
+wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+```
+
+## install wireguard on Linux 
+## https://github.com/Nyr/wireguard-install
+```bash
+wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
+```
+
 ## test return route
 ```
 curl http://tutu.ovh/bash/returnroute/test.sh|bash
