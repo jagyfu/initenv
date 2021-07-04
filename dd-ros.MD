@@ -28,9 +28,12 @@ dd if=chr.img bs=1024 of=/dev/vda && reboot
 ## 阿里云经典双网卡 (注意分清 内外 网卡)
 
 缺省网关
+```
   default via 202.5.30.254 dev eth0 proto static metric 100
   10.0.0.0/8 dev eth1 proto kernel scope link src 10.0.122.21 metric 101 目标地址 <> 网关
   202.5.30.0/24 dev eth0 proto kernel scope link src 202.5.30.231 metric 100 目标地址 <> 网关
+```
+
 ```
 wget https://download.mikrotik.com/routeros/6.47.4/chr-6.47.4.img.zip -O chr.img.zip
 gunzip -c chr.img.zip > chr.img
@@ -55,11 +58,14 @@ dd if=chr.img bs=1024 of=/dev/vda && reboot
  
 
 另一款 双网卡的样本 (注意分清 内外 网卡)
+```
 196.10.68.0/24 dev eth0 proto kernel scope link src 196.10.68.24
 169.254.0.0/16 dev eth0 scope link metric 1002
 169.254.0.0/16 dev eth1 scope link metric 1003
 10.0.0.0/8 dev eth1 proto kernel scope link src 10.0.87.152
 default via 196.10.68.1 dev eth0
+```
+
 ```
 wget https://download.mikrotik.com/routeros/6.45.8/chr-6.45.8.img.zip -O chr.img.zip
 gunzip -c chr.img.zip > chr.img
