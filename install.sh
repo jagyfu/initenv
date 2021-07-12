@@ -44,7 +44,7 @@ chmod a+rx /usr/local/bin/youtube-dl
 if [ ! -e "google-chrome-stable_current_x86_64.rpm" ]; then
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
     yum install google-chrome-stable_current_x86_64.rpm -y
-if
+fi
 ## install redis
 yum install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 yum --enablerepo=remi install redis -y
