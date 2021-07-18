@@ -1,6 +1,10 @@
 # initenv
 
 
+## install soft
+```
+wget https://raw.githubusercontent.com/jagyfu/initenv/main/install.sh -O install.sh | sh install.sh
+```
 
 ## install bbr 
 ```
