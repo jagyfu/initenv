@@ -766,6 +766,8 @@ add dst-address=65.1.170.0/23 action=lookup table=Netflix
 add dst-address=65.1.172.0/22 action=lookup table=Netflix
 add dst-address=66.197.128.0/17 action=lookup table=Netflix
 add dst-address=69.53.224.0/19 action=lookup table=Netflix
+add dst-address=70.232.86.124/31 action=lookup table=Netflix
+add dst-address=70.232.86.126/32 action=lookup table=Netflix
 add dst-address=76.223.95.0/24 action=lookup table=Netflix
 add dst-address=76.223.96.0/21 action=lookup table=Netflix
 add dst-address=76.223.104.0/24 action=lookup table=Netflix
