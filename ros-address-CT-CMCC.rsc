@@ -2334,8 +2334,7 @@ add list=my-CT address=210.5.128.0/20
 add list=my-CT address=210.12.0.0/15
 add list=my-CT address=210.14.160.0/19
 add list=my-CT address=210.14.192.0/18
-add list=my-CT address=210.15.0.0/18
-add list=my-CT address=210.15.96.0/19
+add list=my-CT address=210.15.0.0/17
 add list=my-CT address=210.15.128.0/18
 add list=my-CT address=210.21.0.0/16
 add list=my-CT address=210.22.0.0/16
