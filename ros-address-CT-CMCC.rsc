@@ -2800,7 +2800,6 @@ add list=my-CT address=43.224.240.0/22
 add list=my-CT address=43.225.76.0/22
 add list=my-CT address=43.225.84.0/22
 add list=my-CT address=43.225.124.0/22
-add list=my-CT address=43.225.140.0/22
 add list=my-CT address=43.225.172.0/22
 add list=my-CT address=43.225.180.0/22
 add list=my-CT address=43.225.208.0/22
@@ -4972,7 +4971,6 @@ add list=my-CT address=103.239.204.0/22
 add list=my-CT address=103.239.208.0/22
 add list=my-CT address=103.239.224.0/22
 add list=my-CT address=103.240.16.0/22
-add list=my-CT address=103.240.156.0/22
 add list=my-CT address=103.240.188.0/22
 add list=my-CT address=103.240.244.0/22
 add list=my-CT address=103.241.12.0/22
