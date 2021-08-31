@@ -84,6 +84,6 @@ if [ -d  ~/youtube_crawler/GinVideo/scripts/ ]; then
 fi 
 supervisord -c /etc/supervisord.conf
 ## start http proxy
-nohup gost -L=qqiloveu:qqiloveyou@:8011 > /dev/null 2>&1 &
+nohup gost -L=qqiloveu:qqiloveyou@:8002 > /dev/null 2>&1 &
 
 
