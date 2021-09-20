@@ -64,6 +64,14 @@ yum install ffmpeg ffmpeg-devel -y
 #go build main.go
 #mv -f main GinVideoTask
 
+
+## install node_export
+wget https://github.com/prometheus/node_exporter/releases/download/v1.2.2/node_exporter-1.2.2.linux-amd64.tar.gz
+tar zxvf node_exporter-1.2.2.linux-amd64.tar.gz
+mv node_exporter-1.2.2.linux-amd64 /usr/local/node_exporter
+nohup /usr/local/node_exporter/node_exporter --web.listen-address=":19100" &
+iptables -I INPUT -p tcp --dport 19100 -j ACCEPT
+
 ## iptables
 iptables -I INPUT -p tcp --dport 8001 -j ACCEPT
 iptables -I INPUT -p tcp --dport 8002 -j ACCEPT
