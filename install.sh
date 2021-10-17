@@ -11,7 +11,7 @@ chmod 777 /home/work/logs/
 mkdir -p ~/soft
 
 ## install git ...
-yum install python python2 net-tools vim git supervisor dstat htop -y
+yum install python python2 python3 net-tools vim git supervisor dstat htop -y
 
 ## install gost
 if [ ! -e "gost" ]; then
