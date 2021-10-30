@@ -14,3 +14,13 @@
 #systemctl start grafana-server.service 
 
 ## import grafana json https://grafana.com/grafana/dashboards/8919
+
+
+## install node export
+wget https://github.com/prometheus/node_exporter/releases/download/v1.2.2/node_exporter-1.2.2.linux-amd64.tar.gz
+tar zxvf node_exporter-1.2.2.linux-amd64.tar.gz
+cd node_exporter-1.2.2.linux-amd64
+cp node_exporter /usr/local/
+## start node_exporter
+nohup /usr/local/node_exporter/node_exporter --web.listen-address=":19100" &
+
