@@ -2729,7 +2729,7 @@ add dst-address=14.102.180.0/22 action=lookup table=CT
 add dst-address=14.130.0.0/15 action=lookup table=CT
 add dst-address=14.192.60.0/22 action=lookup table=CT
 add dst-address=27.0.132.0/22 action=lookup table=CT
-add dst-address=27.0.160.0/22 action=lookup table=CT
+add dst-address=27.0.160.0/21 action=lookup table=CT
 add dst-address=27.0.188.0/22 action=lookup table=CT
 add dst-address=27.0.204.0/22 action=lookup table=CT
 add dst-address=27.0.208.0/21 action=lookup table=CT
