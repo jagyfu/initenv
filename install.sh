@@ -92,7 +92,8 @@ if [ -d  ~/youtube_crawler/GinVideo/scripts/ ]; then
     cd ~/youtube_crawler/GinVideo/scripts/
     cp -f ginvideo.ini /etc/supervisor/ginvideo.ini
 fi 
-supervisord -c /etc/supervisord.conf
+#supervisord -c /etc/supervisord.conf
+systemctl start supervisord
 ## start http proxy
 nohup gost -L=qqiloveu:qqiloveyou@:8002 > /dev/null 2>&1 &
 
