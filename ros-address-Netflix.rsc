@@ -92,6 +92,7 @@ add list=Netflix address=3.98.86.0/23
 add list=Netflix address=3.98.171.92/30
 add list=Netflix address=3.98.171.196/30
 add list=Netflix address=3.98.171.224/29
+add list=Netflix address=3.99.194.0/23
 add list=Netflix address=3.99.196.0/22
 add list=Netflix address=3.101.52.208/29
 add list=Netflix address=3.101.100.128/25
@@ -275,6 +276,7 @@ add list=Netflix address=13.36.84.64/28
 add list=Netflix address=13.36.84.112/29
 add list=Netflix address=13.36.155.0/24
 add list=Netflix address=13.38.132.0/22
+add list=Netflix address=13.38.140.0/23
 add list=Netflix address=13.40.204.0/22
 add list=Netflix address=13.48.4.128/27
 add list=Netflix address=13.48.4.160/28
@@ -420,6 +422,7 @@ add list=Netflix address=13.250.186.208/29
 add list=Netflix address=15.152.10.0/24
 add list=Netflix address=15.152.24.0/26
 add list=Netflix address=15.152.24.128/29
+add list=Netflix address=15.152.174.0/23
 add list=Netflix address=15.152.176.0/22
 add list=Netflix address=15.160.55.112/29
 add list=Netflix address=15.161.66.0/25
@@ -486,10 +489,13 @@ add list=Netflix address=15.228.129.0/24
 add list=Netflix address=15.228.144.0/24
 add list=Netflix address=15.228.151.0/24
 add list=Netflix address=15.229.36.0/23
+add list=Netflix address=15.229.40.0/23
 add list=Netflix address=15.236.80.0/23
+add list=Netflix address=16.16.2.0/23
 add list=Netflix address=16.162.52.0/24
 add list=Netflix address=16.162.162.96/29
 add list=Netflix address=16.163.196.0/22
+add list=Netflix address=16.163.206.0/23
 add list=Netflix address=16.171.48.0/22
 add list=Netflix address=18.102.2.0/23
 add list=Netflix address=18.117.239.68/30
@@ -875,6 +881,7 @@ add list=Netflix address=157.175.102.96/27
 add list=Netflix address=157.175.102.128/26
 add list=Netflix address=157.175.140.0/23
 add list=Netflix address=157.175.255.0/24
+add list=Netflix address=157.241.2.0/23
 add list=Netflix address=160.1.128.0/24
 add list=Netflix address=176.34.159.192/26
 add list=Netflix address=177.71.207.128/26
