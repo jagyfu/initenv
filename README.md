@@ -24,9 +24,8 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/ddros.sh
 ```
 bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.sh")
 ```
-## install l2tp ipsec 
 
-## install docket l2tp ipsec 
+## install docker l2tp ipsec 
 安装教程 https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md
 
 #安装
@@ -57,6 +56,8 @@ VPN_PASSWORD=xxxxxxxxxxxxxxxxx
 ```
  docker start ipsec-vpn-server
 ```
+
+## install l2tp ipsec 
 
 ## https://github.com/hwdsl2/setup-ipsec-vpn
 首先，在你的 Linux 服务器\* 上全新安装以下系统之一。
