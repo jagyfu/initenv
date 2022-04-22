@@ -25,6 +25,39 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/ddros.sh
 bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.sh")
 ```
 ## install l2tp ipsec 
+
+## install docket l2tp ipsec 
+安装教程 https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md
+
+#安装
+```
+  docker run \
+    --name ipsec-vpn-server \
+    --restart=always \
+     --env-file /root/vpn.env \
+    -v ikev2-vpn-data:/etc/ipsec.d \
+    -v /lib/modules:/lib/modules:ro \
+    -p 500:500/udp \
+    -p 4500:4500/udp \
+    -d --privileged \
+    hwdsl2/ipsec-vpn-server
+```
+#  配置文件
+``` 
+/root/vpn.env
+```
+ 内容：
+```
+VPN_IPSEC_PSK=xxxxxxxxxx
+VPN_USER=vpnuser
+VPN_PASSWORD=xxxxxxxxxxxxxxxxx
+```
+
+#第二次启动
+```
+ docker start ipsec-vpn-server
+```
+
 ## https://github.com/hwdsl2/setup-ipsec-vpn
 首先，在你的 Linux 服务器\* 上全新安装以下系统之一。
 
