@@ -28,6 +28,13 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.s
 ## install docker l2tp ipsec 
 安装教程 https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md
 
+```
+#安装docker
+   yum install docker -y
+   systemctl status docker
+启动docker
+   systemctl start docker
+```
 #安装
 ```
   docker run \
