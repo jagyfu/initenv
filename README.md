@@ -57,6 +57,9 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.s
 VPN_IPSEC_PSK=xxxxxxxxxx
 VPN_USER=vpnuser
 VPN_PASSWORD=xxxxxxxxxxxxxxxxx
+VPN_L2TP_NET=192.168.46.0/24
+VPN_L2TP_LOCAL=192.168.46.1
+VPN_L2TP_POOL=192.168.46.10-192.168.46.254
 ```
 
 #第二次启动
