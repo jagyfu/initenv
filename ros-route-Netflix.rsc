@@ -908,7 +908,6 @@ add dst-address=16.12.40.0/23 action=lookup table=Netflix
 add dst-address=16.12.48.0/21 action=lookup table=Netflix
 add dst-address=16.12.56.0/23 action=lookup table=Netflix
 add dst-address=16.12.58.0/24 action=lookup table=Netflix
-add dst-address=16.12.60.0/23 action=lookup table=Netflix
 add dst-address=16.16.2.0/23 action=lookup table=Netflix
 add dst-address=16.25.0.0/16 action=lookup table=Netflix
 add dst-address=16.26.0.0/15 action=lookup table=Netflix
@@ -1559,7 +1558,12 @@ add dst-address=52.95.40.0/23 action=lookup table=Netflix
 add dst-address=52.95.42.0/24 action=lookup table=Netflix
 add dst-address=52.95.64.0/18 action=lookup table=Netflix
 add dst-address=52.95.48.0/20 action=lookup table=Netflix
-add dst-address=52.95.128.0/18 action=lookup table=Netflix
+add dst-address=52.95.128.0/19 action=lookup table=Netflix
+add dst-address=52.95.160.0/20 action=lookup table=Netflix
+add dst-address=52.95.176.0/21 action=lookup table=Netflix
+add dst-address=52.95.184.0/22 action=lookup table=Netflix
+add dst-address=52.95.188.0/23 action=lookup table=Netflix
+add dst-address=52.95.190.0/24 action=lookup table=Netflix
 add dst-address=52.95.192.0/20 action=lookup table=Netflix
 add dst-address=52.95.208.0/21 action=lookup table=Netflix
 add dst-address=52.95.216.0/22 action=lookup table=Netflix
