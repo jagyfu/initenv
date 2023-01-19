@@ -437,13 +437,11 @@ add dst-address=13.34.68.128/26 action=lookup table=Netflix
 add dst-address=13.34.72.0/21 action=lookup table=Netflix
 add dst-address=13.34.70.0/23 action=lookup table=Netflix
 add dst-address=13.34.69.0/24 action=lookup table=Netflix
-add dst-address=13.34.80.0/22 action=lookup table=Netflix
-add dst-address=13.34.84.0/23 action=lookup table=Netflix
-add dst-address=13.34.86.0/26 action=lookup table=Netflix
-add dst-address=13.34.87.0/24 action=lookup table=Netflix
-add dst-address=13.34.86.128/25 action=lookup table=Netflix
+add dst-address=13.34.80.0/21 action=lookup table=Netflix
 add dst-address=13.34.88.0/25 action=lookup table=Netflix
 add dst-address=13.34.88.128/26 action=lookup table=Netflix
+add dst-address=13.34.89.0/24 action=lookup table=Netflix
+add dst-address=13.34.90.0/25 action=lookup table=Netflix
 add dst-address=13.35.0.0/16 action=lookup table=Netflix
 add dst-address=13.36.18.0/28 action=lookup table=Netflix
 add dst-address=13.36.18.32/27 action=lookup table=Netflix
