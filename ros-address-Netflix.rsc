@@ -2013,6 +2013,7 @@ add list=Netflix address=150.222.129.112/28
 add list=Netflix address=150.222.129.110/31
 add list=Netflix address=150.222.129.128/27
 add list=Netflix address=150.222.129.224/30
+add list=Netflix address=150.222.129.228/31
 add list=Netflix address=150.222.129.240/29
 add list=Netflix address=150.222.129.248/30
 add list=Netflix address=150.222.129.252/32

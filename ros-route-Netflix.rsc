@@ -2013,6 +2013,7 @@ add dst-address=150.222.129.112/28 action=lookup table=Netflix
 add dst-address=150.222.129.110/31 action=lookup table=Netflix
 add dst-address=150.222.129.128/27 action=lookup table=Netflix
 add dst-address=150.222.129.224/30 action=lookup table=Netflix
+add dst-address=150.222.129.228/31 action=lookup table=Netflix
 add dst-address=150.222.129.240/29 action=lookup table=Netflix
 add dst-address=150.222.129.248/30 action=lookup table=Netflix
 add dst-address=150.222.129.252/32 action=lookup table=Netflix
