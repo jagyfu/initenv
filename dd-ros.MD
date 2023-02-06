@@ -101,3 +101,14 @@ echo 1 > /proc/sys/kernel/sysrq
 echo b > /proc/sysrq-trigger 
 #强行立即重启系统
 ```
+## aws lightsail 安装方法
+
+1 新建实例  amazon 自带的系统
+2 下载ros 6.x chr 系统
+3  解压
+4 执行
+```
+dd if=chr.img of=/dev/xvda 
+reboot
+```
+使用ip地址就能进去设置了
