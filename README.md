@@ -45,6 +45,7 @@ bash <(curl -sSL "https://raw.githubusercontent.com/jagyfu/initenv/main/dd-sys.s
  sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
    systemctl status docker
+   systemctl enable docker
 启动docker
    systemctl start docker
 ```
