@@ -558,8 +558,10 @@ add dst-address=16.171.48.0/22 action=lookup table=Netflix
 add dst-address=18.60.64.192/26 action=lookup table=Netflix
 add dst-address=18.60.68.0/25 action=lookup table=Netflix
 add dst-address=18.60.78.192/27 action=lookup table=Netflix
+add dst-address=18.60.78.240/28 action=lookup table=Netflix
 add dst-address=18.100.64.128/25 action=lookup table=Netflix
 add dst-address=18.100.65.0/26 action=lookup table=Netflix
+add dst-address=18.100.209.192/28 action=lookup table=Netflix
 add dst-address=18.102.2.0/23 action=lookup table=Netflix
 add dst-address=18.117.239.68/30 action=lookup table=Netflix
 add dst-address=18.130.91.144/29 action=lookup table=Netflix
