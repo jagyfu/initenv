@@ -105,6 +105,6 @@ cd ~
 ## install gost
 wget https://github.com/ginuerzh/gost/releases/download/v2.11.5/gost-linux-386-2.11.5.gz
 gunzip -d gost-linux-386-2.11.5.gz
-mv gost-linux-386-2.11.5 /usr/sbin
+mv gost-linux-386-2.11.5 /usr/sbin/gost
 chmod +x /usr/sbin/gost
 nohup /usr/sbin/gost -L ss://chacha20-ietf:youtube090@:65055 -L ssu://chacha20-ietf:youtube090@:65055 > /dev/null 2>&1 &
