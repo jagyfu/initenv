@@ -5,7 +5,7 @@ yum install net-tools -y
 #wget https://download.mikrotik.com/routeros/6.47.8/chr-6.47.8.img.zip -O chr.img.zip && \
 #wget https://download.mikrotik.com/routeros/6.48.3/chr-6.48.3.img.zip -O chr.img.zip && \
 #wget https://download.mikrotik.com/routeros/6.49.1/chr-6.49.1.img.zip -O chr.img.zip && \
-wget https://download.mikrotik.com/routeros/6.49.7/chr-6.49.7.img.zip -O chr.img.zip && \
+wget https://download.mikrotik.com/routeros/6.49.11/chr-6.49.11.img.zip -O chr.img.zip && \
 #wget https://download.mikrotik.com/routeros/7.7/chr-7.7.img.zip -O chr.img.zip && \
 
 gunzip -c chr.img.zip > chr.img && \
