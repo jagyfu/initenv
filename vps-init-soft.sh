@@ -27,8 +27,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 
-docker pull yfyfj/ros
-
 mkdir ros
 cd ros
 
@@ -38,7 +36,7 @@ version: "3"
 services:
 
   routeros-7.9:
-    image: yfyfj/ros
+    image: yfyfj/ros:7.14
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
