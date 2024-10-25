@@ -68,7 +68,7 @@ docker-compose up -d
 cd ~
 mkdir realm
 cd realm
-wget https://github.com/zhboner/realm/releases/download/v2.4.6/realm-x86_64-unknown-linux-musl.tar.gz
+wget https://github.com/zhboner/realm/releases/download/v2.6.3/realm-x86_64-unknown-linux-musl.tar.gz
 tar zxvf realm-x86_64-unknown-linux-musl.tar.gz
 mv realm /usr/sbin/
 rm realm-x86_64-unknown-linux-musl.tar.gz
@@ -101,8 +101,8 @@ realm -c "$realmfile" -d
 cd ~
 
 ## install gost
-wget https://github.com/ginuerzh/gost/releases/download/v2.11.5/gost-linux-386-2.11.5.gz
-gunzip -d gost-linux-386-2.11.5.gz
-mv gost-linux-386-2.11.5 /usr/sbin/gost
+wget https://github.com/ginuerzh/gost/releases/download/v2.12.0/gost_2.12.0_linux_386.tar.gz
+tar zxvf gost_2.12.0_linux_386.tar.gz
+mv gost /usr/sbin/gost
 chmod +x /usr/sbin/gost
 nohup /usr/sbin/gost -L ss://chacha20-ietf:youtube090@:65055 -L ssu://chacha20-ietf:youtube090@:65055 > /dev/null 2>&1 &
