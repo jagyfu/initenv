@@ -55,6 +55,7 @@ services:
       - "1194:1194"
       - "51194:51194"
       - "1194:1194/udp"
+      - "51194:51194/udp"
 '
 file="docker-compose.yml"
 echo "$command" > "$file"
