@@ -35,8 +35,8 @@ version: "3"
 
 services:
 
-  routeros-7.9:
-    image: yfyfj/ros:7.14
+  routeros-7.161:
+    image: yfyfj/ros:7.161
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
