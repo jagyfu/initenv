@@ -69,7 +69,8 @@ docker-compose up -d
 cd ~
 mkdir realm
 cd realm
-wget https://github.com/zhboner/realm/releases/download/v2.6.3/realm-x86_64-unknown-linux-musl.tar.gz
+##wget https://github.com/zhboner/realm/releases/download/v2.6.3/realm-x86_64-unknown-linux-musl.tar.gz
+wget https://github.com/zhboner/realm/releases/download/v2.7.0/realm-x86_64-unknown-linux-musl.tar.gz
 tar zxvf realm-x86_64-unknown-linux-musl.tar.gz
 mv realm /usr/sbin/
 rm realm-x86_64-unknown-linux-musl.tar.gz
