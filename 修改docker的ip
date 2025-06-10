@@ -1,0 +1,28 @@
+要将 Docker 的默认网桥 docker0 的 IP 从 192.168.0.x 修改为 192.168.200.x，请按以下步骤操作：
+
+1. 停止 Docker 服务
+sudo systemctl stop docker
+sudo ip link set docker0 down  # 关闭网桥
+2. 创建新的 Docker 配置
+编辑 Docker 配置文件：
+
+sudo nano /etc/docker/daemon.json
+添加以下内容（如果文件已存在，只需添加 bip 字段）：
+
+{
+  "bip": "192.168.200.1/24",
+  "default-address-pools": [
+    {"base": "192.168.200.0/24", "size": 24}
+  ]
+}
+​​参数说明​​：
+
+bip: 192.168.200.1/24 指定 docker0 网桥的 IP
+default-address-pools: 确保新创建的容器网络也使用此网段
+3. 删除旧网络配置
+sudo ip link delete docker0  # 删除旧网桥
+sudo rm -f /var/lib/docker/network/files/local-kv.db  # 清除旧网络配置
+4. 重启 Docker 并验证
+sudo systemctl start docker
+sudo ip addr show docker0  # 应显示 inet 192.168.200.1/24
+docker network inspect bridge | grep Subnet  # 应显示 "Subnet": "192.168.200.0/24"
