@@ -1,0 +1,53 @@
+## 安装easytier，把所有vps都内网连接在一起
+
+## 下载
+wget https://github.com/EasyTier/EasyTier/releases/download/v2.3.2/easytier-linux-x86_64-v2.3.2.zip
+unzip easytier-linux-x86_64-v2.3.2.zip
+mv easytier-linux-x86_64/ easytier  
+cd easytier
+
+
+config='
+#hostname = "sz-iplc-10253-30m"
+instance_name = "cmcc-home-123321"
+#instance_id = "64a3df11-d6bd-4043-a53b-27461969922c"
+#ipv4 = "10.126.126.2/24"
+dhcp = true 
+listeners = [
+    "tcp://0.0.0.0:11010",
+    "udp://0.0.0.0:11010",
+    "wg://0.0.0.0:11011",
+]
+exit_nodes = ["10.125.35.55"]
+rpc_portal = "0.0.0.0:0"
+socks5_proxy = "socks5://0.0.0.0:61999"
+
+[network_identity]
+network_name = "cmcc-home-123321"
+network_secret = "1qaz2wsx"
+
+[[peer]]
+uri = "tcp://bj.vps.yfyfj.net:11010"
+
+[[proxy_network]]
+cidr = "10.125.32.0/19"
+
+[vpn_portal_config]
+client_cidr = "192.168.30.0/24"
+wireguard_listen = "0.0.0.0:22022"
+
+[flags]
+enable_exit_node = true
+enable_kcp_proxy = true
+enable_quic_proxy = true
+relay_all_peer_rpc = true
+use_smoltcp = true
+'
+file="config.cfg"
+echo "$config" > "$file"
+
+
+## 安装服务
+./easytier-cli service install -c /root/easytier/config.cfg
+## 启动服务
+sudo ./easytier-cli service start
