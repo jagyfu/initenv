@@ -170,3 +170,16 @@ docker 安装
 ```
 docker run -d -v /path/to/config.json:/config.json --network host newfuture/ddns
 ```
+
+## 支持腾讯云的dd-sys 脚本
+ 更好用的一键DD脚本：leitbogioro大佬的脚本
+
+centos 7 安装
+``` wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh' && chmod a+x InstallNET.sh && bash InstallNET.sh -centos 7 -pwd '密码'
+```
+
+debian 12 安装
+```
+wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh' && chmod a+x InstallNET.sh && bash InstallNET.sh -debian 12 -pwd '密码'
+
+```
